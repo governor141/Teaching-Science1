@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Teaching Science</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <section id="splash-screen" class="screen active">
+    <div class="splash-glow"></div>
+    <div class="splash-content">
+      <img src="images/splash_logo.png" alt="Teaching Science" class="splash-logo" />
+      <div class="splash-tagline">Chemistry &middot; SS1 &ndash; SS3 &middot; Schemes of Work</div>
+    </div>
+    <div class="splash-loader"><span></span><span></span><span></span></div>
+  </section>
+
+  <!-- PIN SCREEN -->
+  <section id="pin-screen" class="screen">
+    <div class="pin-glow"></div>
+    <div class="pin-card">
+      <div class="pin-icon-wrap">
+        <img src="images/atom_icon.png" alt="" class="pin-icon" />
+      </div>
+      <h1 id="pin-title" class="pin-title">Enter PIN</h1>
+      <p id="pin-subtitle" class="pin-subtitle">Enter your 4-digit PIN to continue</p>
+
+      <div class="pin-dots" id="pin-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <p id="pin-error" class="pin-error">Incorrect PIN. Try again.</p>
+
+      <div class="keypad" id="keypad">
+        <button class="key" data-key="1">1</button>
+        <button class="key" data-key="2">2</button>
+        <button class="key" data-key="3">3</button>
+        <button class="key" data-key="4">4</button>
+        <button class="key" data-key="5">5</button>
+        <button class="key" data-key="6">6</button>
+        <button class="key" data-key="7">7</button>
+        <button class="key" data-key="8">8</button>
+        <button class="key" data-key="9">9</button>
+        <button class="key key-ghost" data-key="reset" id="pin-reset-btn">Reset</button>
+        <button class="key" data-key="0">0</button>
+        <button class="key key-ghost" data-key="back">&#9003;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME SCREEN -->
+  <section id="home-screen" class="screen">
+    <header class="app-header">
+      <div class="header-left">
+        <img src="images/atom_icon.png" class="header-logo" alt="" />
+        <div>
+          <div class="header-title">Teaching Science</div>
+          <div class="header-subtitle">Chemistry Scheme of Work</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="lock-btn" title="Lock App">&#128274;</button>
+    </header>
+
+    <main class="home-main">
+      <h2 class="section-heading">Select a Class</h2>
+      <div class="card-grid" id="class-grid">
+        <button class="class-card" data-class="SS1">
+          <div class="class-card-glow glow-1"></div>
+          <div class="class-card-label">SS1</div>
+          <div class="class-card-sub">Senior Secondary 1</div>
+        </button>
+        <button class="class-card" data-class="SS2">
+          <div class="class-card-glow glow-2"></div>
+          <div class="class-card-label">SS2</div>
+          <div class="class-card-sub">Senior Secondary 2</div>
+        </button>
+        <button class="class-card" data-class="SS3">
+          <div class="class-card-glow glow-3"></div>
+          <div class="class-card-label">SS3</div>
+          <div class="class-card-sub">Senior Secondary 3</div>
+        </button>
+      </div>
+    </main>
+    <footer class="app-footer">Teaching Science &middot; Built for the classroom</footer>
+  </section>
+
+  <!-- TERM SCREEN -->
+  <section id="term-screen" class="screen">
+    <header class="app-header sub-header">
+      <button class="icon-btn" id="term-back-btn">&#8592;</button>
+      <div class="header-title-block">
+        <div class="header-title" id="term-screen-title">SS1</div>
+        <div class="header-subtitle">Choose a term</div>
+      </div>
+    </header>
+    <main class="home-main">
+      <div class="card-grid card-grid-terms" id="term-grid"></div>
+    </main>
+  </section>
+
+  <!-- SCHEME SCREEN -->
+  <section id="scheme-screen" class="screen">
+    <header class="app-header sub-header">
+      <button class="icon-btn" id="scheme-back-btn">&#8592;</button>
+      <div class="header-title-block">
+        <div class="header-title" id="scheme-screen-title">Scheme of Work</div>
+        <div class="header-subtitle" id="scheme-screen-subtitle">Chemistry</div>
+      </div>
+    </header>
+    <main class="home-main scheme-main">
+      <div class="week-list" id="week-list"></div>
+    </main>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
